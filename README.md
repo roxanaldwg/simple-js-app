@@ -4,12 +4,12 @@
 
 This is my prototype of a simple app with info about Pokemons
 
-Built With
+# Built With
 
     HTML
     CSS
     JavaScript
 
-👤 Author
+# 👤 Author
 
     GitHub: @roxanaldwg
