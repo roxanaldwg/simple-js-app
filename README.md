@@ -11,3 +11,6 @@ This is my prototype of a simple app with info about Pokemons that loads data fr
 # 👤 Author
 
     GitHub: @roxanaldwg
+
+# reference
+https://pokedex.org/
