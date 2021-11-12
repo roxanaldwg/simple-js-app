@@ -1,2 +1,29 @@
-/*stylesheet
-*/
+/*
+Colors used
+
+background-color: #abebc6;
+font-color-body:#154360;
+
+ */
+
+ :root {
+   --background-color: #abebc6;
+   --font-color-body:#154360;
+ }
+
+
+body {
+
+  background-color:  var(--background-color);
+  color: var(--font-color-body);
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.logo {
+  width: 15%;
+  height: 15%;
+  margin-right: 3px;
+}
