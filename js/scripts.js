@@ -27,14 +27,13 @@ let pokemonList = [
   }
 ];
 
-//Create a for loop to list the name and height of the pokemons:
+//Replaced for loop - for each to list the name and height of the pokemons:
 
-for (let i = 0; i < pokemonList.length; i++) {
-  document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + 'm)');
+pokemonList.forEach(function(pokemon) {
+  document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + 'm)' );
 
 //add a conditional to highlight the tallest Pokemon in the list
 
-  if (pokemonList[i].height >= 2) {
-    document.write(" Wow, that's big!");
-  }
-}
+if (pokemon.height >= 2)
+  document.write(" Wow, that's big!");
+});
