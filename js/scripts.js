@@ -3,7 +3,7 @@
 //put pokemonList in IIFE
 
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let repository = [
     {
       name: 'Venusaur',
       height: 2,
@@ -30,36 +30,35 @@ let pokemonRepository = (function () {
       types: ['poison']
     }
   ];
-  //returns the pokemonList array
-  function getAll() {
-    return pokemonList;
-  }
 
     //adds new data to the pokemonList array
   function add(pokemon) {
-      pokemonList.push(pokemon);
+      repository.push(pokemon);
+  }
+
+  //returns the pokemonList array
+  function getAll() {
+    return repository;
+  }
+
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button =  document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
   }
 
   return {
     getAll: getAll,
-    add: add
+    add: add,
+    addListItem: addListItem
   };
-
 })();
 
-//Replaced for loop - for each to list the name and height of the pokemons:
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-//define data to new variables using getAll()
-  let pokemonName = pokemon.name
-  let pokemonHeight = pokemon.height
-  let pokemonType = pokemon.types
-
-//Write to the document
-  document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + 'm)' );
-
-//add a conditional to highlight the tallest Pokemon in the list
-
-  if (pokemon.height >= 2)
-  document.write(" Wow, that's big!");
+  pokemonRepository.addListItem(pokemon);
 });
