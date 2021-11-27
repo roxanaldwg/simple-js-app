@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-
   </head>
 
   <body>
@@ -16,6 +15,13 @@
         <img src="img/pokemon-logo-png-1421.png" class=logo alt="Pokemon Logo">
     </header>
 
+    <div id='modal-container'>
+      <div class='modal'>
+        <div id='img.container'>
+        </div>
+        <button class='modal-close'>close</button>
+      </div>
+    </div>
     <ul class='pokemon-list'></ul>
 
 <!-- The order is important! the polyfill must be loaded before the scripts file -->
