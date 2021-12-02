@@ -1,14 +1,16 @@
 //Pokemon List
 
 //put pokemonList in IIFE
+
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
   //adds new data to the pokemonList array
   function add(pokemon) {
-    pokemonList.push(pokemon);
+      pokemonList.push(pokemon);
   }
+
   //returns the pokemonList array
   function getAll() {
     return pokemonList;
@@ -46,18 +48,18 @@ let pokemonRepository = (function () {
   }
 
   function loadDetails(pokemon) {
-    let url = pokemon.detailsUrl;
-    return fetch(url).then(function (response) {
-      return response.json();
-    }).then(function (details) {
-      // add the details to the item
-      pokemon.imageUrl = details.sprites.front_default;
-      pokemon.height = details.height;
-      pokemon.types = details.types;
-    }).catch(function (e) {
-      console.error(e);
-    });
-  }
+      let url = pokemon.detailsUrl;
+      return fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (details) {
+        // add the details to the item
+        pokemon.imageUrl = details.sprites.front_default;
+        pokemon.height = details.height;
+        pokemon.types = details.types;
+      }).catch(function (e) {
+        console.error(e);
+      });
+    }
 
   //write pokemon details (of button clicked) to console
   function showDetails(pokemon) {
@@ -65,6 +67,8 @@ let pokemonRepository = (function () {
       showModal(pokemon);
     });
   }
+
+
 
   function showModal(pokemon) {
     let modalContainer = document.querySelector('#modal-container');
@@ -100,6 +104,7 @@ let pokemonRepository = (function () {
     });
 
     modal.appendChild(imageElement);
+
     modalContainer.appendChild(modal);
     modalContainer.classList.add('is-visible');
 
@@ -125,6 +130,8 @@ let pokemonRepository = (function () {
   });
 }
 
+
+
   return {
     getAll: getAll,
     add: add,
@@ -133,6 +140,7 @@ let pokemonRepository = (function () {
     loadDetails: loadDetails,
   };
 })();
+
 
 pokemonRepository.loadList().then(function() {
   // Now the data is loaded!
