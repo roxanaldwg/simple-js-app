@@ -15,12 +15,13 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector(".pokemon-list");
-    let listpokemon = document.createElement("li");
-    let button =  document.createElement("button");
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listpokemon = document.createElement('li');
+    let button =  document.createElement('button');
     button.innerText = pokemon.name;
-    button.classList.add("button-class");
+    button.classList.add('button-class', 'btn', 'btn-primary');
     listpokemon.appendChild(button);
+    listpokemon.classList.add('group-list-item');
     pokemonList.appendChild(listpokemon);
 
     //add addEventListener to button
@@ -76,7 +77,7 @@ let pokemonRepository = (function () {
 
     // Close button
     let closeButtonElement = document.createElement('button');
-    closeButtonElement.classList.add('modal-close');
+    closeButtonElement.classList.add('modal-close', 'btn', 'btn-secondary');
     closeButtonElement.innerText = 'close';
     closeButtonElement.addEventListener('click', hideModal);
 
