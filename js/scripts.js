@@ -22,7 +22,7 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name;
     button.classList.add('button-class', 'btn', 'btn-primary');
     button.setAttribute('data-toggle', 'modal');
-    button.setAttribute('data-target', 'pokedexModal');
+    button.setAttribute('data-target', '#pokedexModal');
     listpokemon.appendChild(button);
     listpokemon.classList.add('group-list-item');
     pokemonList.appendChild(listpokemon);
@@ -73,7 +73,7 @@ let pokemonRepository = (function () {
 
   function showPokedexModal(pokemon) {
     let modalBody = $('.modal-body');
-    let modalTitle = $('modal-title');
+    let modalTitle = $('.modal-title');
     modalTitle.empty();
     modalBody.empty();
 
