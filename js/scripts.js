@@ -82,17 +82,12 @@ let pokemonRepository = (function () {
     imageElement.attr('src', pokemon.imageUrl);
 
     let heightElement = $('<p>' + 'Height : ' + pokemon.height + ' m' + '</p>');
-    let typesString = 'Type<span class = "notCapitalised">(s)</span>: ';
-    for (let i = 0; i < pokemon.types.length; i++) {
-    typesString = typesString + pokemon.types[i].type.name;
-    if (i != pokemon.types.length - 1) typesString = typesString + ' & ';
-    }
-    let typesElement = $("<p>" + typesString + "</p>");
 
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
     modalBody.append(heightElement);
-    modalBody.append(typesElement);
+
+    $('#pokedexModal').modal();
   };
 
   return {
