@@ -6,15 +6,13 @@ font-color-body:#154360;
 
  */
 
- :root {
-   --background-color: #abebc6;
-   --font-color-body:#154360;
- }
-
+:root {
+  --background-color: #abebc6;
+  --font-color-body: #154360;
+}
 
 body {
-
-  background-color:  var(--background-color);
+  background-color: var(--background-color);
   color: var(--font-color-body);
   font-family: 'Fira Code', monospace;
   font-weight: 400;
@@ -29,7 +27,7 @@ ul {
 }
 
 .modal-backdrop {
- z-index: 1;
+  z-index: 1;
 }
 
 .modal {
@@ -56,9 +54,9 @@ ul {
   font-size: 16px;
   margin: 4px 2px;
   -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: white;
-    color: black;
-    border: 2px solid #4caf50;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
 }
